@@ -115,3 +115,27 @@ int main() {
         cout << "5. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
+        // Handle menu choices
+        switch (choice) {
+            case 1:
+                createAccount(accounts);
+                break;
+            case 2:
+                depositMoney(accounts);
+                break;
+            case 3:
+                withdrawMoney(accounts);
+                break;
+            case 4:
+                checkBalance(accounts);
+                break;
+            case 5:
+                cout << "Exiting the program. Goodbye!\n";
+                return 0;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+        }
+    }
+
+    return 0;
+}
